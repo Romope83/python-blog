@@ -20,6 +20,10 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index')
-    path('posts/',views.lista_posts,name='lista_posts')
+    path('',views.index,name='index'),
+    path('posts/',views.lista_posts,name='lista_posts'),
+    path('posts/post_detalhe/<int:pk>/', views.post_detalhe, name='post_detalhe'),
+    path('python/',views.pagina_python,name='pagina_python'),
+    path('posts/<str:linguagem>/', views.posts_por_linguagem, name='posts_por_linguagem'),
+
 ]
